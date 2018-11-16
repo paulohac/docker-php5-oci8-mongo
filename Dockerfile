@@ -1,5 +1,11 @@
 FROM php:5.6-apache
 
+LABEL image_name="php5-Oci8-mongodb"
+LABEL maintainer="paulohac <paulohenrique.comp@gmail.com>"
+LABEL git_repostiory_url="https://github.com/paulohac/docker-php5-oci8-mongo"
+LABEL parent_image="php:5.6-apache"
+
+#download deb packages from oficial sources
 ADD oracle-instantclient12.1-basic_12.1.0.2.0-2_amd64.deb /opt
 ADD oracle-instantclient12.1-devel_12.1.0.2.0-2_amd64.deb /opt
 ADD oracle-instantclient12.1-sqlplus_12.1.0.2.0-2_amd64.deb /opt
